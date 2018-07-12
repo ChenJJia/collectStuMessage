@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="../css/jquery-weui.min.css" />
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-weui.min.js"></script>
+<script type="text/javascript" src="../js/city-picker.min.js"></script>
+<script>
+ window.onload=function(){
+    $("#city-picker").cityPicker({
+        title: "选择省市区/县",
+        onChange: function (picker, values, displayValues) {
+            console.log(values, displayValues);
+        }
+    });
+
+    	var city_picker=document.getElementById("city-picker");
+	   var textbutton=document.getElementById("textButton");
+	   textbutton.onclick=function(){
+   		var s=city_picker.value;
+   		var home= new Array();
+   		home=s.split(" ");
+   		var province=home[0];    //省份
+   		var city=home[1];      //城市
+   		var country=home[2];   //区县
+    }
+}
+</script>
